@@ -1,0 +1,51 @@
+<!-- templates/add_order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title>Add Order</title>
+</head>
+<body>
+    <h1>Add Order</h1>
+    <!--
+    大訂單號碼: big_order_id
+    訂單號碼: small_order_id
+    訂單日期: order_date
+    顧客: customer
+    電話號碼: phone
+    電郵: email
+    商品貨號: product_id
+    商品名稱: product_name
+    數量: quantity
+    商品類型: product_type (can be null)
+    送貨方式: delivery_method
+    -->
+    <form action="/orders/" method="post">
+        <label for="big_order_id">大訂單號碼:</label><br>
+        <input type="text" id="big_order_id" name="big_order_id"><br>
+        <label for="small_order_id">訂單號碼:</label><br>
+        <input type="text" id="small_order_id" name="small_order_id"><br>
+        <label for="order_date">訂單日期:</label><br>
+        <input type="date" id="order_date" name="order_date"><br>
+        <label for="customer">顧客:</label><br>
+        <input type="text" id="customer" name="customer"><br>
+        <label for="phone">電話號碼:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <label for="email">電郵:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="product_id">商品貨號:</label><br>
+        <input type="text" id="product_id" name="product_id"><br>
+        <label for="product_name">商品名稱:</label><br>
+        <input type="text" id="product_name" name="product_name"><br>
+        <label for="quantity">數量:</label><br>
+        <input type="text" id="quantity" name="quantity"><br>
+        <label for="product_type">商品類型:</label><br>
+        <input type="text" id="product_type" name="product_type"><br>
+        <label for="delivery_method">送貨方式:</label><br>
+        <input type="text" id="delivery_method" name="delivery_method"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
