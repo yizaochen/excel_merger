@@ -1,4 +1,6 @@
-# database.py
+"""
+This file defines the SQLAlchemy model for the database.
+"""
 import yaml
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker, declarative_base
@@ -15,6 +17,7 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
+
 
 class Orders(Base):
     """
