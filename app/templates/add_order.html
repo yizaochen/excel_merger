@@ -24,14 +24,28 @@
     商品類型: product_type
     送貨方式: delivery_method
     -->
-    <form action="/orders/" method="post" class="addOrderForm" id="add-order-form">
+    <!--
+        id: int = Field(..., example="1")
+        big_order_id: str = Field(..., example="B000")
+        small_order_id: str = Field(..., example="#20230703021032226")
+        order_date: str = Field(..., example="07/03/2023 10:10:32")
+        customer: str = Field(..., example="歐于綸")
+        phone: str = Field(..., example="0930075728")
+        email: str = Field(..., example="tingyu.wang12@gmail.com")
+        product_id: str = Field(..., example="A10103001")
+        product_name: str = Field(..., example="Pattis 青潤保濕精萃蜜 30mL")
+        quantity: int = Field(..., example="1")
+        product_type: str = Field(..., example="")
+        delivery_method: str = Field(..., example="11")
+    -->
+    <form action="/add_order/form_success" method="get" class="addOrderForm" id="add-order-form">
         <div>
             <label for="big_order_id">大訂單號碼:</label>
-            <input type="text" id="big_order_id" name="big_order_id" required>
+            <input type="text" id="big_order_id" name="big_order_id" placeholder="B000" required>
         </div>
         <div>
             <label for="small_order_id">訂單號碼:</label>
-            <input type="text" id="small_order_id" name="small_order_id" required>
+            <input type="text" id="small_order_id" name="small_order_id" placeholder="#20230703021032226" required>
         </div>
         <div>
             <label for="order_date">訂單日期:</label>
@@ -39,35 +53,35 @@
         </div>
         <div>
             <label for="customer">顧客:</label>
-            <input type="text" id="customer" name="customer" required>
+            <input type="text" id="customer" name="customer" placeholder="歐于綸" required>
         </div>
         <div>
             <label for="phone">電話號碼:</label>
-            <input type="text" id="phone" name="phone" required>
+            <input type="text" id="phone" name="phone" placeholder="0930075728" required>
         </div>
         <div>
             <label for="email">電郵:</label>
-            <input type="text" id="email" name="email" required>
+            <input type="text" id="email" name="email" placeholder="yizaochen@gmail.com" required>
         </div>
         <div>
             <label for="product_id">商品貨號:</label>
-            <input type="text" id="product_id" name="product_id" required>
+            <input type="text" id="product_id" name="product_id" placeholder="A10103001" required>
         </div>
         <div>
             <label for="product_name">商品名稱:</label>
-            <input type="text" id="product_name" name="product_name" required>
+            <input type="text" id="product_name" name="product_name" placeholder="Pattis 青潤保濕精萃蜜 30mL" required>
         </div>
         <div>
             <label for="quantity">數量:</label>
-            <input type="text" id="quantity" name="quantity" required>
+            <input type="text" id="quantity" name="quantity" placeholder="1" required>
         </div>
         <div>
             <label for="product_type">商品類型:</label>
-            <input type="text" id="product_type" name="product_type" required>
+            <input type="text" id="product_type" name="product_type" placeholder="" required>
         </div>
         <div>
             <label for="delivery_method">送貨方式:</label>
-            <input type="text" id="delivery_method" name="delivery_method" required>
+            <input type="text" id="delivery_method" name="delivery_method" placeholder="11" required>
         </div>
         <div class="button">
             <input type="submit" value="Submit">

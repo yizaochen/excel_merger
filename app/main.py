@@ -37,6 +37,9 @@ async def index(request: Request):
 async def add_order(request: Request):
     return templates.TemplateResponse(name="add_order.html", context={"request": request})
 
+@app.get("/add_order/form_success")
+async def form_success(request: Request):
+    return templates.TemplateResponse(name="form_success.html", context={"request": request})
 
 # back-end routes
 @app.post("/add_order/add")
